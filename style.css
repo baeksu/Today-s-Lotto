@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#root {
+    /* position: relative; */
+    width: 393px;
+    height: 752px;
+    background: #e2e4ff;
+}
+
+#main-section {
+    margin: 0 40px 0 40px;
+}
+
+#title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    font-size: 40px;
+    width: 393px;
+    height: 121px;
+    background: #b3b6f8;
+}
+
+#selected-ball-section {
+}
+
+#selected-balls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#lotto-machine-canvas {
+    margin-top: 10px;
+    width: 313px;
+    height: 250px;
+    border-radius: 5%;
+    background-color: cadetblue;
+    text-align: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    background-color: azure;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#pick-ball-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin-top: 15px;
+    background-color: beige;
+    border: none;
+    border-radius: 0.5em;
+    height: 40px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #fba834;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+
+        <title>Today's Lotto</title>
+    </head>
+    <body>
+        <div id="root">
+            <div id="title">Today's Lotto</div>
+            <div id="main-section">
+                <div id="selected-ball-section">
+                    <div id="selected-balls">
+                        <span id="ball-1">1번공</span>
+                        <span id="ball-2">2번공</span>
+                        <span id="ball-3">3번공</span>
+                    </div>
+                    <div id="selected-balls">
+                        <span id="ball-4">4번공</span>
+                        <span id="ball-5">5번공</span>
+                        <span id="ball-6">6번공</span>
+                    </div>
+                </div>
+                <canvas id="lotto-machine-canvas">
+                    <!-- <p>로또 빙글빙글 이미지</p> -->
+                </canvas>
+
+                <div id="pick-ball-buttons">
+                    <button id="pick-one-button">Pick One</button>
+                    <button id="pick-all-button">Pick All</button>
+                </div>
+            </div>
+        </div>
+        <script src="./canvas.js"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>
