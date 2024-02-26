@@ -6,8 +6,6 @@
  * - 만약 6개 모두를 뽑았으면 모달창을 하나 띄워주자. ("다시 뽑을지, 아니면 그대로 멈출지")
  * - "Pick All" 버튼을 누르면 남아있는 횟수만큼 공을 뽑아준다.
  *
- * 2차 요구사항 정리
- * - 선택한 공을 로또 머신에서 제거하고 해당 공의 색깔로 span 태그를 채워준다.
  *
  */
 
@@ -28,13 +26,14 @@ function pickOneBall() {
         pickedNum = Math.trunc(Math.random() * 45) + 1;
 
         //한번도 뽑은 적이 없는 공이라면 while 종료.
-        if (!checkPickedBalls[pickedNum]) {
-            checkPickedBalls[pickedNum] = 1;
-            pickedBallCount++;
-            pickedBalls.push(pickedNum);
-            document.querySelector(`#ball-${pickedBallCount}`).textContent = pickedNum;
-            break;
-        }
+        if (checkPickedBalls[pickedNum]) continue;
+
+        checkPickedBalls[pickedNum] = 1;
+        pickedBallCount++;
+        pickedBalls.push(pickedNum);
+        document.querySelector(`#ball-${pickedBallCount}`).textContent = pickedNum;
+
+        break;
     }
 }
 
@@ -43,21 +42,9 @@ function pickAllBall() {
         return;
     }
 
-    while (true) {
-        //이미 6개를 뽑았는지 검증
-        if (pickedBallCount >= 6) break;
-
-        let pickedNum = 0;
-
-        pickedNum = Math.trunc(Math.random() * 45) + 1;
-
-        //한번도 뽑은 적이 없는 공이라면 while 종료.
-        if (!checkPickedBalls[pickedNum]) {
-            checkPickedBalls[pickedNum] = 1;
-            pickedBallCount++;
-            pickedBalls.push(pickedNum);
-            document.querySelector(`#ball-${pickedBallCount}`).textContent = pickedNum;
-        }
+    //남아있는 횟수 만큼 하나씩 공을 뽑는다.
+    for (let i = pickedBallCount; i < 6; i++) {
+        pickOneBall();
     }
 }
 

@@ -47,7 +47,7 @@ const initBalls = () => {
         const r = Math.floor(Math.random() * 256) + 1;
         const g = Math.floor(Math.random() * 256) + 1;
         const b = Math.floor(Math.random() * 256) + 1;
-        const ball = new Ball(i, canvas.height / 2 + Math.random() * 10, canvas.width / 2 + Math.random() * 10, 20, Math.random() * 1, Math.random() * 1, r, g, b);
+        const ball = new Ball(i, canvas.height / 2 + Math.random() * 10, canvas.width / 2 + Math.random() * 10, 20, getRandomNumber(), getRandomNumber(), r, g, b);
 
         balls.push(ball);
         console.log(ball);
